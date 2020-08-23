@@ -43,6 +43,7 @@ namespace Test
       Assert.Equal(result, test.CelciusToFarenheit(num));
     }
 
+
     [Theory]
     [InlineData("kayak", true)]
     [InlineData("Kayak", true)] //Capitalisation
@@ -54,6 +55,7 @@ namespace Test
       Assert.Equal(result, test.IsPalindrome(str));
     }
 
+
     [Theory]
     [InlineData("this is a string", 'i', 'x', "thxs xs a strxng")]
     [InlineData("thIs is a strIng", 'i', 'x', "thxs xs a strxng")] //Capitalisation.
@@ -64,6 +66,7 @@ namespace Test
       var test = new GroupOneFunctions();
       Assert.Equal(result, test.StringReplace(str, targetChar, replacementChar));
     }
+
 
     [Theory]
     [InlineData("this is a string", 'i', 3)]
