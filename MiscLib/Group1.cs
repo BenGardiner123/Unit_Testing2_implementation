@@ -69,7 +69,12 @@ namespace MiscLib
 
     public int CharCount(string word, char countCharacter)
     {
-      throw new NotImplementedException();
+      string targetWord = word;
+		  char ch = countCharacter;
+
+      int freq = targetWord.Where(x => (x == ch)).Count();
+      return freq;
+      
     }
 
 
