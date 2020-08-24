@@ -34,14 +34,14 @@ namespace Test
       Assert.Equal(result, test.IsFactiorialNum(num));
     }
 
-    [Theory]
+    /* [Theory]
     [InlineData(13, 55.4)]
     [InlineData(-13, 8.6)]
     public void CelciusToFarenheit_Test(int num, float result)
     {
       var test = new GroupOneFunctions();
       Assert.Equal(result, test.CelciusToFarenheit(num));
-    }
+    } */
 
 
     [Theory]
