@@ -43,11 +43,11 @@ namespace MiscLib
     }
 
 
-    public int CelciusToFarenheit(int celcius)
+   /*  public int CelciusToFarenheit(int celcius)
     {
-      //think there is an issue with the return types
-      return ((9.0 / 5.0) * celcius) + 32;
-    }
+      
+      //return ((9.0 / 5.0) * celcius) + 32;
+    } */
 
 
 
