@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Collections.Generic;	
+using System.Globalization;
 
 namespace MiscLib
 {
@@ -43,11 +45,10 @@ namespace MiscLib
     }
 
 
-   /*  public int CelciusToFarenheit(int celcius)
-    {
-      
-      //return ((9.0 / 5.0) * celcius) + 32;
-    } */
+    public int CelciusToFarenheit(int celcius)
+    { 
+      return ((celcius * 9 / 5) + 32);
+    } 
 
 
 
@@ -62,15 +63,24 @@ namespace MiscLib
     public string StringReplace(string word, char replaceChar, char replacement)
     {
       string wordHolder;
+      string toreplace = replaceChar.ToString();
+      string replaceWith = replacement.ToString();
+
+      if(word == null)
+      {
+        throw new System.ArgumentException("Parameter cannot be null", $"You entered { word }");
+      }
+      else
+      {
+        return wordHolder = Regex.Replace(word, toreplace, replaceWith, RegexOptions.IgnoreCase);
+      }
       
-      return wordHolder = word.Replace(replaceChar, replacement);
-    
     }
 
     public int CharCount(string word, char countCharacter)
     {
-      string targetWord = word;
-		  char ch = countCharacter;
+      string targetWord = word.ToLower();
+		  char ch = char.ToLower(countCharacter);
 
       int freq = targetWord.Where(x => (x == ch)).Count();
       return freq;

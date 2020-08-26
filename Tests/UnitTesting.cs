@@ -25,23 +25,24 @@ namespace Test
     }
 
     [Theory]
-    [InlineData(21, true)]
+    [InlineData(24, true)]
     [InlineData(-6, false)]
-    [InlineData(6, false)]
+    [InlineData(6, true)]
+    [InlineData(4, false)]
     public void IsFactiorialNum_Test(int num, bool result)
     {
       var test = new GroupOneFunctions();
       Assert.Equal(result, test.IsFactiorialNum(num));
     }
 
-    /* [Theory]
-    [InlineData(13, 55.4)]
-    [InlineData(-13, 8.6)]
-    public void CelciusToFarenheit_Test(int num, float result)
+    [Theory]
+    [InlineData(13, 55)]
+    [InlineData(-13, 9)]
+    public void CelciusToFarenheit_Test(int num, int result)
     {
       var test = new GroupOneFunctions();
       Assert.Equal(result, test.CelciusToFarenheit(num));
-    } */
+    }
 
 
     [Theory]
