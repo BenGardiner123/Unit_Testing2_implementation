@@ -12,9 +12,17 @@ namespace MiscLib
 
     public int CalcRectArea(int length, int width)
     {
+           if (length < 0 || width < 0 )
+           {
+             throw new System.Exception("Input cannot be less than 0");
+           }
+           else
+           {
             int RectArea;
             RectArea =  (length * width);
             return RectArea;
+           }
+            
     }
 
 
